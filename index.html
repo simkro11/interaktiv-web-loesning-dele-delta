@@ -1,18 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Advarsel</title>
-    <link rel="stylesheet" href="style-alvorlig.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style-alvorlig.css" />
+  </head>
+  <body>
     <div class="alert-container">
-        <h1>ADVARSEL!</h1>
-        <p>Dette spillet støtter ikke deling av voldsvideoer, og oppfordrer heller ikke slik eller lignende aktivitet. Noen spørsmål kan se ut til å støtte voldsvideoer, men dette gjør de ikke.</p>
-        <p style="margin-bottom:30px;">Det er heller ikke anbefalt å spille dette spillet om ikke du tåler sterke og kontroversielle temaer. Du har blitt advart.</p>
-        <a href="quiz.html">START SPILLET</a>
-    </div>
-</body>
+      <h1>ADVARSEL!</h1>
+      <p>
+        Dette spillet støtter <b>IKKE</b> deling av voldsvideoer, og oppfordrer
+        heller ikke slik eller lignende aktivitet. Noen spørsmål kan se ut til å
+        støtte voldsvideoer, men dette gjør de <b>ikke.</b>
+      </p>
+      <p style="margin-bottom: 30px">
+        Det er heller ikke anbefalt å spille dette spillet om du er sensetiv til
+        sterke og kontroversielle temaer. <b>Du har blitt advart.</b>
+      </p>
 
+      <input type="checkbox" id="checkToUnlock" onchange="toggleLink()" />
+      <label for="checkToUnlock" style="margin-right:10px;"><b>Jeg har lest advarslen og ønsker å fortsette.</b></label>
+
+      <a
+        id="myLink"
+        href="quiz.html"
+        style="pointer-events: none; color: black; text-decoration: none"
+      >
+        START SPILLET
+      </a>
+    </div>
+  </body>
+  <script src="advarsel.js"></script>
 </html>
