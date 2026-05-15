@@ -53,9 +53,13 @@ function loadQuestion() {
 
 // Check the answer
 function checkAnswer(selectedOption) {
+  // Sjekker at svaret er answer og legger til score og konsekvens etter det.
   if (selectedOption === quizData[currentQuestion].answer) {
     score++;
-    // todo: legge til string i consequences
+    console.log("Score har blitt gitt", score);
+    consequences = quizData[currentQuestion].consequence;
+    console.log("Svaret har blitt sjekket, og en konsekvens har blitt gitt");
+    console.log(consequences);
   }
   currentQuestion++;
   loadQuestion();
