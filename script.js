@@ -28,6 +28,9 @@ const optionsEl = document.querySelector(".options");
 const resultEl = document.querySelector(".result");
 const scoreEl = document.getElementById("score");
 const restartBtn = document.querySelector(".restart-btn");
+const con_result = document.querySelector(".con_result");
+const alvorligboks = document.getElementById("alvorlig-boks");
+const alvorlig = document.getElementById("alvorlig-bakgrunn");
 
 // Function to load the question
 function loadQuestion() {
@@ -57,10 +60,18 @@ function checkAnswer(selectedOption) {
   if (selectedOption === quizData[currentQuestion].answer) {
     score++;
     console.log("Score har blitt gitt", score);
-    consequences = quizData[currentQuestion].consequence;
+    consequences.push(quizData[currentQuestion].consequence);
     console.log("Svaret har blitt sjekket, og en konsekvens har blitt gitt");
     console.log(consequences);
+
+    const con_list = document.getElementById("consequencelist");
+
+    const li = document.createElement("li");
+    li.textContent = quizData[currentQuestion].consequence;
+    con_list.appendChild(li);
+    ``;
   }
+
   currentQuestion++;
   loadQuestion();
 }
@@ -85,6 +96,10 @@ function endQuiz() {
   resultEl.style.display = "block";
   scoreEl.textContent = score;
   restartBtn.style.display = "block";
+  con_result.style.display = "block";
+  alvorlig.style.backgroundColor = "#000";
+  alvorligboks.style.background = "#333";
+  alvorligboks.style.color = "#fff";
 }
 
 // Restart the quiz
@@ -94,12 +109,20 @@ restartBtn.addEventListener("click", () => {
   score = 0;
   timeLeft = 30;
   timerEl.textContent = timeLeft;
+  const con_list = document.getElementById("consequencelist");
+  con_list.innerHTML = "";
+  consequences = [];
 
   // Reset the display
   questionEl.style.display = "block";
   optionsEl.style.display = "flex"; // Ensure options are displayed correctly
   resultEl.style.display = "none";
   restartBtn.style.display = "none";
+  con_result.style.display = "none";
+  console.log(consequences);
+  alvorlig.style.backgroundColor = "var(--white-bg)";
+  alvorligboks.style.background = "var(--white)";
+  alvorligboks.style.color = "#000";
 
   // Load the first question
   loadQuestion();
