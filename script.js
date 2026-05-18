@@ -2,19 +2,37 @@ const quizData = [
   {
     question:
       "En venn deler en video med deg der en person får nesen sin brukket av noen og begynner å hyle og skrike på en latterlig måte. Deler du denne videre?",
-    options: ["Ja", "Nei"],
-    answer: "Ja",
+    options: ["Ja!", "Nei."],
+    answer: "Ja!",
     consequence:
       "Som en konsekvens av at du videredelte videoen av personen med brukket nese, endte den personen opp som et enda større voldsoffer og tok livet sitt i etterkant på grunn av deg.",
   },
   {
     question:
       "Du ser noen ha en seriøs og grov slosskamp ved bussholderplassen på skolen din og du vurderer å ta opp en video av det. Dette er potensial for massevis av likes på TikTok. Hva gjør du?",
-    options: ["Ta opp videoen og del den på TikTok", "Ikke ta opp videoen"],
-    answer: "Ta opp videoen og del den på TikTok",
+    options: ["Ta opp videoen og del den på TikTok!", "Ikke ta opp videoen."],
+    answer: "Ta opp videoen og del den på TikTok!",
     consequence:
       "Siden du tok videoen av den grove slosskampen og delte den på TikTok, så har den nå blitt så populær at de som var inni videoen klarte å identifisere deg. De har planer om å gjøre deg til et voldsoffer.",
   },
+  {
+    question:
+      "Du har blitt kontaktet av en ghetto gjeng for å gjøre en liten prank på noen om kvelden ved å slå dem i hodet med en hammer og ta det opp. Gjengen lover at de kommer til å beskytte deg og gi deg penger for dette. Er det hammertid eller unngår du dette?",
+    options: ["Hammertid!", "Jeg unngår dette"],
+    answer: "Hammertid!",
+    consequence:
+      "Etter du slo den personen med hammer, ble det rapportert på nyhetene at de hadde blitt funnet med permanent og alvorlig traumatisk hjerneskade. Personen bare fungerer rett og slett ikke lenger på grunn av det du gjorde.",
+  },
+
+  // Template for spørsmål:
+    //  {
+    //    question:
+    //      "",
+    //    options: ["", ""],
+    //    answer: "",
+    //    consequence:
+    //      "",
+    //  },
 ];
 
 let currentQuestion = 0;
@@ -29,6 +47,7 @@ const resultEl = document.querySelector(".result");
 const scoreEl = document.getElementById("score");
 const restartBtn = document.querySelector(".restart-btn");
 const con_result = document.querySelector(".con_result");
+const lovsiden = document.querySelector(".lovsiden")
 const alvorligboks = document.getElementById("alvorlig-boks");
 const alvorlig = document.getElementById("alvorlig-bakgrunn");
 
@@ -58,7 +77,9 @@ function loadQuestion() {
 function checkAnswer(selectedOption) {
   // Sjekker at svaret er answer og legger til score og konsekvens etter det.
   if (selectedOption === quizData[currentQuestion].answer) {
-    score++;
+    if (score < 2) {
+        score++;
+      }
     console.log("Score har blitt gitt", score);
     consequences.push(quizData[currentQuestion].consequence);
     console.log("Svaret har blitt sjekket, og en konsekvens har blitt gitt");
@@ -97,6 +118,7 @@ function endQuiz() {
   scoreEl.textContent = score;
   restartBtn.style.display = "block";
   con_result.style.display = "block";
+  lovsiden.style.display = "block";
   alvorlig.style.backgroundColor = "#000";
   alvorligboks.style.background = "#333";
   alvorligboks.style.color = "#fff";
@@ -119,6 +141,7 @@ restartBtn.addEventListener("click", () => {
   resultEl.style.display = "none";
   restartBtn.style.display = "none";
   con_result.style.display = "none";
+  lovsiden.style.display = "none";
   console.log(consequences);
   alvorlig.style.backgroundColor = "var(--white-bg)";
   alvorligboks.style.background = "var(--white)";

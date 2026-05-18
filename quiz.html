@@ -8,12 +8,18 @@
 
   <body id="alvorlig-bakgrunn">
     <div class="quiz-container" id="alvorlig-boks">
-      <div class="timer">Time Left: <span id="time">30</span>s</div>
+      <div class="timer">Tid igjen: <span id="time">30</span>s</div>
       <div class="question">Question will appear here</div>
       <div class="options"></div>
-      <div class="result">Du får <span id="score">0</span> års fengsel.</div>
-      <button class="restart-btn">Restart Quiz</button>
+      <div class="result">
+        For det du har gjort, får du <span id="score">0</span> års fengsel. Men
+        det er ikke bare fengselstiden du har å angre:
+      </div>
       <ul id="consequencelist" class="con_result"></ul>
+      <a style="color:white" class="lovsiden" href="https://lovdata.no/lov/2005-05-20-28/§267a"
+        >Du kan lære litt om loven for deling av voldsvideoer her på § 267 a. og § 267 b.</a
+      >
+      <button class="restart-btn">Restart Quiz</button>
     </div>
   </body>
   <script src="script.js"></script>
