@@ -23,6 +23,14 @@ const quizData = [
     consequence:
       "Etter du slo den personen med hammer, ble det rapportert på nyhetene at de hadde blitt funnet med permanent og alvorlig traumatisk hjerneskade. Personen bare fungerer rett og slett ikke lenger på grunn av det du gjorde.",
   },
+  {
+    question:
+    "Du fikk se en video av noen som fikk flere steiner kastet på seg. Det er den plagsomme naboen din som alle i hele nabolaget inkludert deg hater. Det hadde sett gøy ut å dele denne videoen. Gjør du det?",
+    options: ["Selvfølgelig! Dette er noe naboen fortjener.", "Dette er feil å gjøre."],
+    answer: "Selvfølgelig! Dette er noe naboen fortjener.",
+    consequence:
+    "Når du delte videoen av naboen som ble angrepet, fant naboen videoen og hadde nok. Hele nabolaget ditt ble stengt ned av politiet etter naboen din hadde tatt livet til 2 andre i nabolaget.",
+  },
 
   // Template for spørsmål:
     //  {
@@ -44,6 +52,7 @@ const timerEl = document.getElementById("time");
 const questionEl = document.querySelector(".question");
 const optionsEl = document.querySelector(".options");
 const resultEl = document.querySelector(".result");
+const result = document.getElementById("result")
 const scoreEl = document.getElementById("score");
 const restartBtn = document.querySelector(".restart-btn");
 const con_result = document.querySelector(".con_result");
@@ -119,9 +128,20 @@ function endQuiz() {
   restartBtn.style.display = "block";
   con_result.style.display = "block";
   lovsiden.style.display = "block";
-  alvorlig.style.backgroundColor = "#000";
+  alvorlig.style.backgroundColor = "var(--black)";
+  alvorligboks.style.background = "#333";
   alvorligboks.style.background = "#333";
   alvorligboks.style.color = "#fff";
+
+  if (score == 0) {
+    resultEl.style.color = "#4caf50";
+    result.textContent = "Du har ikke gjort noen forbrytelser, godt jobba! Men det anbefales fortsatt å lese loven:";
+  }
+
+  if (score > 0.9) {
+    resultEl.style.color = "#f31208"
+    result.textContent = "For det du har gjort, får du " + score + " års fengsel. Men det er ikke bare fengselstiden du har å angre:";
+  }
 }
 
 // Restart the quiz
@@ -145,7 +165,7 @@ restartBtn.addEventListener("click", () => {
   console.log(consequences);
   alvorlig.style.backgroundColor = "var(--white-bg)";
   alvorligboks.style.background = "var(--white)";
-  alvorligboks.style.color = "#000";
+  alvorligboks.style.color = "var(--black)";
 
   // Load the first question
   loadQuestion();
