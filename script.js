@@ -25,11 +25,35 @@ const quizData = [
   },
   {
     question:
-    "Du fikk se en video av noen som fikk flere steiner kastet på seg. Det er den plagsomme naboen din som alle i hele nabolaget inkludert deg hater. Det hadde sett gøy ut å dele denne videoen. Gjør du det?",
+    "Du får se en video av noen som får flere steiner kastet på seg. Det er den plagsomme naboen din som alle i hele nabolaget inkludert deg hater. Det hadde sett gøy ut å dele denne videoen. Gjør du det?",
     options: ["Selvfølgelig! Dette er noe naboen fortjener.", "Dette er feil å gjøre."],
     answer: "Selvfølgelig! Dette er noe naboen fortjener.",
     consequence:
     "Når du delte videoen av naboen som ble angrepet, fant naboen videoen og hadde nok. Hele nabolaget ditt ble stengt ned av politiet etter naboen din hadde tatt livet til 2 andre i nabolaget.",
+  },
+  {
+    question:
+      "Du ser noen bli slått ned i gata. Det er mange folk som tar opp video av det og ler, så det er vel ikke så farlig om du blir med litt på å ta video? Mange andre er jo med på det som sagt. Ta et valg",
+    options: ["Bli med på moroa!", "Avstå fra moroa."],
+    answer: "Bli med på moroa!",
+    consequence:
+      "Da du ble med de folkene med å ta opp video av den personen, dukket politiet opp. Det ble en hel nyhetssak om det. Ingen arbeidsgiver kommer til å la deg ha en jobb når de finner deg i den nyhetssaken.",
+  },
+  {
+    question:
+      "Du har akkurat tatt opp en voldsvideo av noen som ble slått ned og kan ikke slette den pga. en programvarefeil. Du kan enten beholde videoen og ikke gjøre noe med den for å muligens unngå at politiet beslaglegger telefonen, eller melde ifra til politiet og bruke videoen på telefonen bare som bevis",
+    options: ["Jeg skal ikke miste telefonen min til en purk.", "Jeg skal melde ifra en forbrytelse."],
+    answer: "Jeg skal ikke miste telefonen min til en purk.",
+    consequence:
+      "Voldsvideoen du valgte å beholde ble funnet langt senere etter den ble tatt. Telefonen din ble beslaglagt uansett og du hjalp til med at voldsofferet endte opp med å aldri bli funnet igjen.",
+  },
+  {
+    question:
+      "Du har enda igjen tatt opp en voldsvideo og kan ikke slette den, men denne gangen får du et tilbud av en gjeng om å dele den til dem på et fysisk sted der du må møte dem. Denne gangen blir det 100 tusen kroner. Tar du tilbudet?",
+    options: ["Aldri noe dårlig med litt spenn.", "Meld ifra videoen og tilbudet til politiet."],
+    answer: "Aldri noe dårlig med litt spenn.",
+    consequence:
+      "Når du tok tilbudet om å dele en voldsvideo for 100 tusen kroner, gikk du til det stedet for å møte gjengen. De tok opp en video av deg bli slått i hjel. Du er død.",
   },
 
   // Template for spørsmål:
