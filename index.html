@@ -6,29 +6,106 @@
     <link rel="stylesheet" href="style-alvorlig.css" />
   </head>
   <body>
-    <div class="alert-container">
-      <h1>ADVARSEL!</h1>
-      <p>
-        Dette spillet støtter <b>IKKE</b> deling av voldsvideoer, og oppfordrer
-        heller ikke slik eller lignende aktivitet. Noen spørsmål kan se ut til å
-        støtte voldsvideoer, men dette gjør de <b>ikke.</b>
-      </p>
-      <p style="margin-bottom: 30px">
-        Det er heller ikke anbefalt å spille dette spillet om du er sensetiv til
-        sterke og kontroversielle temaer. <b>Du har blitt advart.</b>
-      </p>
+    <div class="container">
+      <section class="intro">
+        <h1>DELE = DELTA</h1>
 
-      <input type="checkbox" id="checkToUnlock" onchange="toggleLink()" />
-      <label for="checkToUnlock" style="margin-right:10px;"><b>Jeg har lest advarslen og ønsker å fortsette.</b></label>
+        <h2>Å dele er å delta</h2>
+        <p>
+          Deling av voldsvideoer på sosiale medier kan gi en smitteeffekt,
+          forsterke konflikter eller bidra til å starte nye konflikter. Deling
+          kan føre til at det blir flere tilfeller av vold, og at volden blir
+          grovere på grunn av et ønske om oppmerksomhet. Dette skjer over hele
+          landet, og bruk av sosiale medier gjør deling nærmest grenseløs. Den
+          som deler en voldsvideo er med på å utsette voldsofre for et nytt
+          overgrep.
+        </p>
+      </section>
 
-      <a
-        id="myLink"
-        href="quiz.html"
-        style="pointer-events: none; color: black; text-decoration: none"
+      <a style="color:white" class="lovsiden" href="https://lovdata.no/lov/2005-05-20-28/§267a"
+        >Du kan lære litt om loven for deling av voldsvideoer her på § 267 a. og § 267 b.</a
       >
-        START SPILLET
-      </a>
+
+      <section class="info">
+        <h2>Hva betyr det?</h2>
+
+        <p>
+          Å dele videre er ikke bare “å sende noe videre”. Det betyr at du
+          bidrar til at flere ser det.
+        </p>
+
+        <h2>Et spill for å teste hva du kan om voldsvideoer</h2>
+
+        <p>
+          Her er et spill laget for å få deg til å teste hva du kan om
+          voldsvideoer og reflektere over valg du tar på nett og konsekvensene
+          av dem. Du må lese advarselen og akseptere den før du kan fortsette.
+        </p>
+      </section>
+
+      <div class="alert-container">
+        <h1>ADVARSEL!</h1>
+        <p>
+          Spillet støtter <b>IKKE</b> deling av voldsvideoer, og oppfordrer
+          heller ikke slik eller lignende aktivitet. Noen spørsmål kan se ut til
+          å støtte voldsvideoer, men dette gjør de <b>ikke.</b>
+        </p>
+        <p style="margin-bottom: 30px">
+          Det er heller ikke anbefalt å spille dette spillet om du er sensetiv
+          til sterke og kontroversielle temaer. <b>Du har blitt advart.</b>
+        </p>
+
+        <input type="checkbox" id="checkToUnlock" onchange="toggleLink()" />
+        <label for="checkToUnlock" style="margin-right: 10px"
+          ><b>Jeg har lest advarslen og ønsker å fortsette.</b></label
+        >
+
+        <a
+          id="myLink"
+          href="quiz.html"
+          style="pointer-events: none; color: black; text-decoration: none"
+        >
+          START SPILLET
+        </a>
+      </div>
+
+      <section class="faq">
+        <h2>Spørsmål og svar</h2>
+
+        <div class="faq-item">
+          <h3>Er det ulovlig å dele voldsvideoer?</h3>
+          <p>
+            Ja. Deling av krenkende eller private videoer kan være straffbart,
+            selv om du ikke var med på selve hendelsen.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Hva skjer hvis jeg deler?</h3>
+          <p>
+            Du kan bidra til mer vold, og personen i videoen kan oppleve det som
+            et nytt overgrep.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Hva bør jeg gjøre hvis jeg får en slik video?</h3>
+          <p>
+            Ikke del den videre. Meld fra til appen eller politiet, og slett den
+            hvis den ikke skal brukes som bevis.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Hvorfor finnes dette spillet?</h3>
+          <p>
+            For å vise hvordan valg på nett kan få konsekvenser, og hjelpe deg å
+            ta bedre beslutninger.
+          </p>
+        </div>
+      </section>
+
+      <script src="advarsel.js"></script>
     </div>
   </body>
-  <script src="advarsel.js"></script>
 </html>
