@@ -17,11 +17,11 @@ const quizData = [
   },
   {
     question:
-      "Du har blitt kontaktet av en ghetto gjeng for å gjøre en liten prank på noen om kvelden ved å slå dem i hodet med en hammer og ta det opp. Gjengen lover at de kommer til å beskytte deg og gi deg penger for dette. Er det hammertid eller unngår du dette?",
-    options: ["Hammertid!", "Jeg unngår dette"],
-    answer: "Hammertid!",
+      "Du har blitt kontaktet av en ghetto gjeng for å ta opp en video av noen om kvelden der de blir slått i hodet med en hammer. Gjengen lover at de kommer til å beskytte deg og gi deg penger for dette. Blir det penger eller unngår du dette?",
+    options: ["Det blir spenn!", "Jeg unngår dette."],
+    answer: "Det blir spenn!",
     consequence:
-      "Etter du slo den personen med hammer, ble det rapportert på nyhetene at de hadde blitt funnet med permanent og alvorlig traumatisk hjerneskade. Personen bare fungerer rett og slett ikke lenger på grunn av det du gjorde.",
+      "Etter du tok opp videoen av den personen som ble slått med hammer, ble det rapportert på nyhetene at personen hadde blitt funnet med permanent og alvorlig traumatisk hjerneskade. Mange lagde morro av dette på grunn av det du delte.",
   },
   {
     question:
@@ -29,7 +29,7 @@ const quizData = [
     options: ["Selvfølgelig! Dette er noe naboen fortjener.", "Dette er feil å gjøre."],
     answer: "Selvfølgelig! Dette er noe naboen fortjener.",
     consequence:
-    "Når du delte videoen av naboen som ble angrepet, fant naboen videoen og hadde nok. Hele nabolaget ditt ble stengt ned av politiet etter naboen din hadde tatt livet til 2 andre i nabolaget.",
+    "Når du delte videoen av naboen som ble angrepet, fant naboen videoen og hadde nok. Hele nabolaget ditt ble stengt ned av politiet etter naboen din hadde voldelig angrepet flere i nabolaget som hevn.",
   },
   {
     question:
@@ -41,9 +41,9 @@ const quizData = [
   },
   {
     question:
-      "Du har akkurat tatt opp en voldsvideo av noen som ble slått ned og kan ikke slette den pga. en programvarefeil. Du kan enten beholde videoen og ikke gjøre noe med den for å muligens unngå at politiet beslaglegger telefonen, eller melde ifra til politiet og bruke videoen på telefonen bare som bevis",
-    options: ["Jeg skal ikke miste telefonen min til en purk.", "Jeg skal melde ifra en forbrytelse."],
-    answer: "Jeg skal ikke miste telefonen min til en purk.",
+      "Du har akkurat tatt opp en voldsvideo av noen som ble slått ned og kan ikke slette den pga. en programvarefeil. Du kan enten beholde videoen og ikke gjøre noe med den for å unngå at politiet beslaglegger telefonen, eller melde ifra til politiet og bruke videoen på telefonen som bevis",
+    options: ["Jeg skal ikke miste telefonen min til politiet.", "Jeg skal melde ifra."],
+    answer: "Jeg skal ikke miste telefonen min til politiet.",
     consequence:
       "Voldsvideoen du valgte å beholde ble funnet langt senere etter den ble tatt. Telefonen din ble beslaglagt uansett og du hjalp til med at voldsofferet endte opp med å aldri bli funnet igjen.",
   },
@@ -53,7 +53,7 @@ const quizData = [
     options: ["Aldri noe dårlig med litt spenn.", "Meld ifra videoen og tilbudet til politiet."],
     answer: "Aldri noe dårlig med litt spenn.",
     consequence:
-      "Når du tok tilbudet om å dele en voldsvideo for 100 tusen kroner, gikk du til det stedet for å møte gjengen. De tok opp en video av deg bli slått i hjel. Du er død.",
+      "Når du tok tilbudet om å dele en voldsvideo for 100 tusen kroner, gikk du til det stedet for å møte gjengen. De tok opp en voldsvideo av deg bli slått i hjel. Du er død.",
   },
 
   // Template for spørsmål:
