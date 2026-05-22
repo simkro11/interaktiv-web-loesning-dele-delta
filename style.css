@@ -3,6 +3,7 @@
   --white: #fff;
   --white-bg: #f4f4f9;
   --black: #000;
+  --dry-red: #ff4d4d;
 }
 
 /* BODY */
@@ -59,13 +60,13 @@ body {
 .timer {
   font-size: 1.2em;
   margin-bottom: 20px;
-  color: #ff5722;
+  color: var(--dry-red);
 }
 
 /* RESULTATTEKST */
 .result {
   font-size: 1.3em;
-  color: #ff4d4d;
+  color: var(--dry-red);
   display: none;
 
   text-align: left;
@@ -113,4 +114,52 @@ body {
   color: #007bff;
   margin-top: 15px;
   display: block;
+}
+
+
+/* POPUP */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: #1a0000;
+  color: var(--dry-red);
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border: 2px solid red;
+}
+
+.popup-content h2 {
+  color: var(--dry-red);
+}
+
+.popup-content button {
+  background-color: var(--dry-red);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.popup-content button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.popup.hidden {
+  display: none;
 }

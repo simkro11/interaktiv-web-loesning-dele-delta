@@ -86,24 +86,25 @@ const alvorlig = document.getElementById("alvorlig-bakgrunn");
 
 // Function to load the question
 function loadQuestion() {
-  if (currentQuestion >= quizData.length) {
-    endQuiz();
-    return;
-  }
-  clearInterval(timerInterval);
-  timeLeft = 30;
-  timerEl.textContent = timeLeft;
-  startTimer();
-  const currentQuiz = quizData[currentQuestion];
-  questionEl.textContent = currentQuiz.question;
-  optionsEl.innerHTML = ""; // Clear previous options
-  currentQuiz.options.forEach((option) => {
-    const button = document.createElement("button");
-    button.classList.add("option");
-    button.textContent = option;
-    button.onclick = () => checkAnswer(option);
-    optionsEl.appendChild(button);
-  });
+  if (!quizStarted) return;
+    if (currentQuestion >= quizData.length) {
+      endQuiz();
+      return;
+    }
+    clearInterval(timerInterval);
+    timeLeft = 30;
+    timerEl.textContent = timeLeft;
+    startTimer();
+    const currentQuiz = quizData[currentQuestion];
+    questionEl.textContent = currentQuiz.question;
+    optionsEl.innerHTML = ""; // Clear previous options
+    currentQuiz.options.forEach((option) => {
+      const button = document.createElement("button");
+      button.classList.add("option");
+      button.textContent = option;
+      button.onclick = () => checkAnswer(option);
+      optionsEl.appendChild(button);
+    });
 }
 
 // Check the answer
@@ -195,5 +196,20 @@ restartBtn.addEventListener("click", () => {
   loadQuestion();
 });
 
-// Initialize the quiz with the first question
-loadQuestion();
+let quizStarted = false;
+
+const popup = document.getElementById("warningPopup");
+const acceptCheck = document.getElementById("acceptCheck");
+const acceptBtn = document.getElementById("acceptBtn");
+
+// aktiver knapp når checkbox er huket av
+acceptCheck.addEventListener("change", () => {
+  acceptBtn.disabled = !acceptCheck.checked;
+});
+
+// når bruker trykker fortsett
+acceptBtn.addEventListener("click", () => {
+  popup.classList.add("hidden");
+  quizStarted = true;
+  loadQuestion();
+});

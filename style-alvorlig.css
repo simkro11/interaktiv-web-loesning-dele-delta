@@ -1,3 +1,12 @@
+:root {
+  --title-color: #007bff;
+  --h2-title: #4080da;
+  --white: #fff;
+  --white-bg: #f4f4f9;
+  --black: #000;
+  --red: red;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #0d0d0d;
@@ -13,12 +22,12 @@ body {
 }
 
 h1 {
-  color: red;
+  color: var(--title-color);
   font-size: 3em;
 }
 
 h2 {
-  color: #ff4d4d;
+  color: var(--h2-title);
 }
 
 p {
@@ -27,34 +36,30 @@ p {
 }
 
 .alert-container {
-  margin-top: 40px;
-  padding: 25px;
-  border: 2px solid red;
-  background-color: #1a0000;
+  padding: 35px;
+  margin: auto;
+  background-color: #000516;
+  border: 2px solid var(--title-color);
 }
 
 .alert-container p {
   text-align: left;
+  margin-bottom: 25px;
 }
 
-.checkbox {
-  margin-top: 20px;
-}
-
-#myLink {
-  display: inline-block;
+.alert-container a {
   margin-top: 25px;
   padding: 12px 25px;
-  background-color: red;
-  color: white;
+  background-color: var(--h2-title);
+  color: #f1f3f5;
   text-decoration: none;
   font-weight: bold;
-  pointer-events: none;
   transition: 0.3s;
+  border: 2px solid var(--title-color);
 }
 
-#myLink:hover {
-  background-color: darkred;
+.alert-container a:hover {
+  background-color: #002c63;
 }
 
 .faq {
@@ -63,7 +68,6 @@ p {
 }
 
 .faq h2 {
-  color: #ff4d4d;
   text-align: center;
 }
 
@@ -71,7 +75,7 @@ p {
   margin-bottom: 20px;
   padding: 15px;
   background-color: #1a1a1a;
-  border-left: 4px solid red;
+  border-left: 4px solid var(--title-color)
 }
 
 .faq-item h3 {
