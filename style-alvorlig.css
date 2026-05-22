@@ -23,6 +23,7 @@ h2 {
 
 p {
   line-height: 1.6;
+  text-align: left;
 }
 
 .alert-container {
@@ -30,6 +31,10 @@ p {
   padding: 25px;
   border: 2px solid red;
   background-color: #1a0000;
+}
+
+.alert-container p {
+  text-align: left;
 }
 
 .checkbox {

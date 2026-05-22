@@ -151,15 +151,15 @@ function endQuiz() {
   scoreEl.textContent = score;
   restartBtn.style.display = "block";
   con_result.style.display = "block";
-  lovsiden.style.display = "block";
   alvorlig.style.backgroundColor = "var(--black)";
   alvorligboks.style.background = "#333";
   alvorligboks.style.background = "#333";
   alvorligboks.style.color = "#fff";
+  lovsiden.style.color = "#fff";
 
   if (score == 0) {
     resultEl.style.color = "#4caf50";
-    result.textContent = "Du har ikke gjort noen forbrytelser, godt jobba! Men det anbefales fortsatt å lese loven:";
+    result.textContent = "Du har ikke gjort noen forbrytelser, godt jobba! Men det anbefales fortsatt å lese loven som kan finnes på hovedsiden:";
   }
 
   if (score > 0.9) {
@@ -185,11 +185,11 @@ restartBtn.addEventListener("click", () => {
   resultEl.style.display = "none";
   restartBtn.style.display = "none";
   con_result.style.display = "none";
-  lovsiden.style.display = "none";
   console.log(consequences);
   alvorlig.style.backgroundColor = "var(--white-bg)";
   alvorligboks.style.background = "var(--white)";
   alvorligboks.style.color = "var(--black)";
+  lovsiden.style.color = "#000";
 
   // Load the first question
   loadQuestion();
