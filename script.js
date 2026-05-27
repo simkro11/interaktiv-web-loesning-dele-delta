@@ -1,3 +1,4 @@
+// Listen med spørsmål. Har forskjellige ting som må legges inn og konsekvenssvaret må bli satt som en av valgene i options.
 const quizData = [
   {
     question:
@@ -67,6 +68,7 @@ const quizData = [
     //  },
 ];
 
+// Liste av globale variabler
 let currentQuestion = 0;
 let score = 0;
 let timeLeft = 30;
@@ -182,13 +184,13 @@ restartBtn.addEventListener("click", () => {
 
   // Reset the display
   questionEl.style.display = "block";
-  optionsEl.style.display = "flex"; // Ensure options are displayed correctly
+  optionsEl.style.display = "flex";
   resultEl.style.display = "none";
   restartBtn.style.display = "none";
   con_result.style.display = "none";
   console.log(consequences);
-  alvorlig.style.backgroundColor = "var(--white-bg)";
-  alvorligboks.style.background = "var(--white)";
+  alvorlig.style.backgroundColor = "var(--white-less-strain)";
+  alvorligboks.style.background = "var(--white-bg)";
   alvorligboks.style.color = "var(--black)";
   lovsiden.style.color = "#000";
 
@@ -202,12 +204,12 @@ const popup = document.getElementById("warningPopup");
 const acceptCheck = document.getElementById("acceptCheck");
 const acceptBtn = document.getElementById("acceptBtn");
 
-// aktiver knapp når checkbox er huket av
+// Aktiver knapp når checkbox er huket av
 acceptCheck.addEventListener("change", () => {
   acceptBtn.disabled = !acceptCheck.checked;
 });
 
-// når bruker trykker fortsett
+// Når bruker trykker fortsett
 acceptBtn.addEventListener("click", () => {
   popup.classList.add("hidden");
   quizStarted = true;

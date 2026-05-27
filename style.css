@@ -4,12 +4,13 @@
   --white-bg: #f4f4f9;
   --black: #000;
   --dry-red: #ff4d4d;
+  --white-less-strain: #F3EFE0;
 }
 
 /* BODY */
 body {
   font-family: Arial, sans-serif;
-  background-color: var(--white-bg);
+  background-color: var(--white-less-strain);
   color: #333;
   margin: 0;
   padding: 0;
@@ -21,7 +22,7 @@ body {
 
 /* QUIZ BOX */
 .quiz-container {
-  background: #fff;
+  background: var(--white-bg);
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 90%;
@@ -148,7 +149,7 @@ body {
 
 .popup-content button {
   background-color: var(--dry-red);
-  color: var(--white);
+  color: var(--white-less-strain);
   border: none;
   padding: 10px 20px;
   border-radius: 8px;
@@ -156,7 +157,8 @@ body {
 }
 
 .popup-content button:disabled {
-  background-color: gray;
+  background-color: var(--white-less-strain);
+  color: var(--dry-red);
   cursor: not-allowed;
 }
 
