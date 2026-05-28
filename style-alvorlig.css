@@ -76,7 +76,7 @@ p {
   margin-bottom: 20px;
   padding: 15px;
   background-color: #1a1a1a;
-  border-left: 4px solid var(--title-color)
+  border-left: 4px solid var(--title-color);
 }
 
 .faq-item h3 {
