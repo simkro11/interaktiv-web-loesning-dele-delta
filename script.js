@@ -82,7 +82,6 @@ const result = document.getElementById("result")
 const scoreEl = document.getElementById("score");
 const restartBtn = document.querySelector(".restart-btn");
 const con_result = document.querySelector(".con_result");
-const lovsiden = document.querySelector(".lovsiden")
 const alvorligboks = document.getElementById("alvorlig-boks");
 const alvorlig = document.getElementById("alvorlig-bakgrunn");
 
@@ -158,7 +157,6 @@ function endQuiz() {
   alvorligboks.style.background = "#333";
   alvorligboks.style.background = "#333";
   alvorligboks.style.color = "#fff";
-  lovsiden.style.color = "#fff";
 
   if (score == 0) {
     resultEl.style.color = "#4caf50";
@@ -192,7 +190,6 @@ restartBtn.addEventListener("click", () => {
   alvorlig.style.backgroundColor = "var(--white-less-strain)";
   alvorligboks.style.background = "var(--white-bg)";
   alvorligboks.style.color = "var(--black)";
-  lovsiden.style.color = "#000";
 
   // Load the first question
   loadQuestion();
@@ -215,3 +212,7 @@ acceptBtn.addEventListener("click", () => {
   quizStarted = true;
   loadQuestion();
 });
+
+function goToHome() {
+  window.location.href = "index.html";
+}

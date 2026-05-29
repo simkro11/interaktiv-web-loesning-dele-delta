@@ -5,8 +5,11 @@
     <title>Spillet</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body id="alvorlig-bakgrunn">
+    <ul class="navbar">
+      <li><a href="index.html">Hjem</a></li>
+      <li><a href="quiz.html">Spillet for DELE=DELTA</a></li>
+    </ul>
     <div class="popup" id="warningPopup" class="popup">
       <div class="popup-content">
         <h1>ADVARSEL!</h1>
@@ -28,12 +31,18 @@
         <br><br>
 
 
-        <button
-          id="acceptBtn"
-          disabled
-        >
-          START SPILLET
+        
+      <div class="popup-buttons">
+        <button id="acceptBtn" disabled>
+          Start spillet
         </button>
+
+        <button onclick="goToHome()">
+          Gå tilbake
+        </button>
+      </div>
+
+
         </a>
       </div>
     </div>
@@ -46,9 +55,6 @@
         det er ikke bare fengselstiden du har å angre:
       </div>
       <ul id="consequencelist" class="con_result"></ul>
-      <a style="color:black" class="lovsiden" href="index.html"
-        >Trykk her om du vil gå tilbake til hovedsiden</a
-      >
       <button class="restart-btn">Restart Quiz</button>
     </div>
   </body>

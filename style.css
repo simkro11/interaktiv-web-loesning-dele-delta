@@ -13,12 +13,12 @@ body {
   background-color: var(--white-less-strain);
   color: #333;
   margin: 0;
-  padding: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  flex-direction: column;
+  min-height: 100vh;
+
 }
+
 
 /* QUIZ BOX */
 .quiz-container {
@@ -28,7 +28,9 @@ body {
   width: 90%;
   max-width: 600px;
   padding: 20px;
+  margin: auto;
   box-sizing: border-box;
+  justify-content: center;
 }
 
 /* QUESTION */
@@ -109,14 +111,6 @@ body {
   background-color: #7a3835;
 }
 
-/* LENKE TILBAKE */
-.lovsiden {
-  display: none;
-  color: #007bff;
-  margin-top: 15px;
-  display: block;
-}
-
 
 /* POPUP */
 .popup {
@@ -164,4 +158,38 @@ body {
 
 .popup.hidden {
   display: none;
+}
+
+.popup-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* mellomrom mellom knappene */
+  margin-top: 20px;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+  position: sticky;
+  top: 0;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111111;
 }
