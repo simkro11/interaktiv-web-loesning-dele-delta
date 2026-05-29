@@ -1,3 +1,4 @@
+/* FARGER */
 :root {
   --title-color: #007bff;
   --h2-title: #4080da;
@@ -8,6 +9,7 @@
   --red: red;
 }
 
+/* BODY */
 body {
   font-family: Arial, sans-serif;
   background-color: #0d0d0d;
@@ -16,12 +18,14 @@ body {
   text-align: center;
 }
 
+/* CONTAINER */
 .container {
   max-width: 800px;
   margin: auto;
   padding: 40px 20px;
 }
 
+/* TEKST-STANDARER */
 h1 {
   color: var(--title-color);
   font-size: 3em;
@@ -36,6 +40,7 @@ p {
   text-align: left;
 }
 
+/* BOKS FOR SPILLET */
 .alert-container {
   padding: 35px;
   margin: auto;
@@ -63,6 +68,7 @@ p {
   background-color: #002c63;
 }
 
+/* FAQ LISTEN */
 .faq {
   margin-top: 40px;
   text-align: left;
@@ -87,6 +93,7 @@ p {
   margin: 0;
 }
 
+/* NAVIGATION BAR */
 ul {
   list-style-type: none;
   margin: 0;
