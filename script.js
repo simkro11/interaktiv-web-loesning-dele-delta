@@ -160,7 +160,7 @@ function endQuiz() {
 
   if (score == 0) {
     resultEl.style.color = "#4caf50";
-    result.textContent = "Du har ikke gjort noen forbrytelser, godt jobba! Men det anbefales fortsatt å lese loven som kan finnes på hovedsiden:";
+    result.textContent = "Du har ikke gjort noen forbrytelser, godt jobba! Men det anbefales fortsatt å lese loven som kan finnes på hovedsiden.";
   }
 
   if (score > 0.9) {
